@@ -1,0 +1,29 @@
+==============================================================================
+setup verification — quantum classifier robustness on IoT intrusion data
+==============================================================================
+[PASS] python version >= 3.11                       3.12.13
+[PASS] numpy importable and pinned to 2.1.x         2.1.3
+[PASS] sklearn importable and pinned to 1.5.x       1.5.2
+[PASS] pandas importable and pinned to 2.2.x        2.2.3
+[PASS] pennylane importable and pinned to 0.45.x    0.45.1
+[PASS] data loads                                   4096 rows x 41 features
+[PASS] feature count matches the paper              41
+[PASS] all three capture windows named              w1-morning, w2-evening, w3-overnight
+[PASS] labels are binary                            classes=[0, 1]
+[PASS] class balance within 40-60%                  0.497
+[PASS] split is disjoint                            3073 train / 1023 test
+[PASS] split is stratified                          train=0.497 test=0.497
+[PASS] split is seeded and reproducible             seed=20260917
+[PASS] quantum map qubit count                      6 qubits
+[PASS] feature map dimensionality as specified      41 -> 21
+[PASS] feature map is finite                        no NaN/inf
+[PASS] feature map is bounded                       max|x|=1.000
+[PASS] baseline trains                              AUC=0.8820
+[PASS] baseline beats chance                        AUC=0.8820
+[PASS] baseline within published band (0.80-0.92)   AUC=0.8820
+[WARN] GPU available                                none detected — CPU only, fine at this scale
+[PASS] RNG is seeded globally                       default_rng(20260917)
+------------------------------------------------------------------------------
+21 passed, 1 warning, 0 failed
+STATUS: READY (with caveats)
+------------------------------------------------------------------------------
